@@ -144,6 +144,7 @@ public class SchoolRepository implements CrudDao<School> {
             statement.setString(1, school.getName());
             statement.setLong(2, school.getCapacity());
             statement.setString(3, school.getCountry());
+            statement.setLong(4, school.getId());
 
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to update data");
